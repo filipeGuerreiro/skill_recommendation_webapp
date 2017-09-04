@@ -1,0 +1,28 @@
+<% provide(:title, @user.name) %>
+<h3>
+  <%= gravatar_for @user %>
+  <%= @user.name %>
+</h3>
+
+<div>
+	<% if logged_in? && @user.name == current_user.name %>
+	  <% @skill = current_user.skills.build %>
+      <div class="row">
+          <section class="skill_form">
+            <%= render 'skills/skill_form' %>
+          </section>
+      </div>
+	<% end %>
+	
+    <% if @skills.any? %>
+      <h5>Skills - <%= @skills.count %></h5>
+	  
+	  <!-- pre-load recommendations given by this user for in-memory check when rendering each skill -->
+	  <% @recommendations_given = Recommendation.where(user_id: current_user.id) %>	  
+	  <ol class="skills">
+	    <%= render @skills %>
+	  </ol>
+	  
+      <%= will_paginate @skills %>
+    <% end %>
+</div>

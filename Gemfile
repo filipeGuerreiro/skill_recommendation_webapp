@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.3.1', :engine => 'jruby', :engine_version => '9.1.8.0'
+ruby '2.3.3', :engine => 'jruby', :engine_version => '9.1.12.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
@@ -15,6 +15,15 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
+
+gem 'bootstrap-sass', '~> 3.2.0'
+
+gem 'faker', '~> 1.8.4'
+
+gem 'bullet'
+
+gem 'will_paginate',           '3.1.5'
+gem 'bootstrap-will_paginate', '1.0.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

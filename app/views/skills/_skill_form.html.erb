@@ -1,0 +1,9 @@
+<%= form_for(@skill) do |f| %>
+  <%= render 'layouts/error_messages', object: f.object %>
+  <div class="form-inline col-md-3" style="float:left;">
+    <%= f.text_field :name, class: 'form-control', placeholder: "Add new skill" %>
+  </div>
+  <div class="form-inline col-md-3" style="float:left;">
+	<%= f.submit "Add", class: "btn btn-primary" %>
+  </div>
+<% end %>

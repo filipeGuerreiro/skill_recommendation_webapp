@@ -1,0 +1,28 @@
+<div id="table-wrapper">
+<div id="table-scroll">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Users</th>
+			</tr>
+		</thead>
+		
+		<ul class="users">
+		  <% @users.each do |user| %>
+		    <% if user == current_user %>
+				<li style="background-color:PaleGreen;">
+				  <%= gravatar_for user, size: 20 %>
+				  <%= link_to user.name, user %>
+				</li>
+			<% else %>
+				<li>
+				  <%= gravatar_for user, size: 20 %>
+				  <%= link_to user.name, user %>
+				</li>
+			<% end %>
+		  <% end %>
+		</ul>
+		
+	</table>
+</div>
+</div>
