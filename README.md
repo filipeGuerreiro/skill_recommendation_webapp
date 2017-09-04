@@ -1,21 +1,8 @@
-# ruby-getting-started (Microsoft Windows)
+# Skill recommendation application
 
-A barebones Rails app, which can easily be deployed to Heroku - on Microsoft Windows.
+A demo app built on Rails that emulates the ability for users to recommend personal skills, similar to the feature used by LinkedIn or Wantedly.
 
-This application support the [Getting Started with Ruby on Heroku (Microsoft Windows)](https://devcenter.heroku.com/articles/getting-started-with-jruby) article - check it out.
-
-## Deploying to Heroku
-
-```sh
-$ heroku create
-$ git push heroku master
-$ heroku run rake db:migrate
-$ heroku open
-```
-
-## Documentation
-
-For more information about using Ruby on Heroku, see these Dev Center articles:
-
-- [Ruby on Heroku](https://devcenter.heroku.com/categories/ruby)
-
+The important features are:
+- A user can add his/her skill list.
+- A user can recommend and can +1 skills on profile pages of other users.
+- A skill list is sorted by # of +1s.
